@@ -1,7 +1,104 @@
-h1{
+/* h1{
     border: 10px dotted gold;
     border-radius: 50px;
     background-color: red;
     text-align: center;
     box-shadow: 5px 5px grey;
+} */
+
+/* borde ubiversal
+*{
+    border: 1px dashed palevioletred;
+}*/
+
+/* selector por id
+#link1{
+    font-size: 20px;
 }
+#link6{
+    background-color: aqua;
+} */
+
+/* Selector por clase
+.rojo{
+    background-color: red;
+    border: 5px groove black;
+    border-radius: 5px;
+}
+.aqua{
+    background-color: aqua;
+    border: 5px inset;
+}*/
+/* Modificar elementos especificos de la misma clase*/
+h1.aqua{
+    font-size: 50px;
+}
+/*lo que hace es aumentar el tamaño de la letra a el elemento que tenga la etiqueta h1 y que tenga la clase aqua*/
+/* Buscar por atributo sin inportar el valor
+[href]{
+    border-bottom: 5px solid aquamarine;
+}
+[lang]{
+    color: aquamarine;
+}
+*/
+/*Modificacion de elento  especifico con condiciones
+[href='#']{
+    color: azure;
+}
+[href *='you']{
+    color: aqua;
+}*/
+/*modifica  a los elementos que tnga la palabra indicada en este caso links de youtube
+[href^='https']{
+    font-size: 25px;
+}*/
+/*modifica solo si empieza co https
+[href$='.com']{
+    color: blue;
+}
+*/
+#p1{
+    border-top: 3px solid aqua;
+    border-bottom: 5px solid aquamarine;
+}
+#p1 main{
+    background-color: aquamarine;
+}
+#p1 aside{
+    background-color: purple;
+}
+#p1 footer{
+    background-color: rgb(3, 82, 82);
+}
+#p1 > footer{
+    border: 5px double red;
+}
+/* este es un ejemplo de modificacion de hijo directo (modificadoer de etiquetas que solo roma la linea de codigo siguiente)*/
+#p1 article > footer{
+    border:5px double blue;
+}
+/* modifica unicamente el footer de un articulo de una mini pagina*/
+/* hermano general modifica solo los elementos de su nivel*/
+#p1 h2~article{
+    box-shadow: 10px 10px aquamarine;
+}
+/*Hermano adyasente modifica solo el elemento adyasente*/
+#p1 h2 + article{
+    border-top: 5px double blue;
+}
+/*Para reutilizar un codigo de estilo se coloqca una , y despues donde va a ir eso*/
+#p1 h2 + article, #p1 nav{
+    border-top: 5px double blue;
+}
+/*
+#id
+.clase
+[]atributos
+main articulo desendiente
+main,articulo lista
+main> articulo hijo directo
+main~ articulo hermanos (mismo nivel)
+main +articulo hermano adyasente
+main* todos
+css diner (revisar paginasirve para los decendientes)*/
